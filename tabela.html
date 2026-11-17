@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema da Tabela Inteligente</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container-principal">
+        <!--Seção do formulário: onde o usuário insere os dados -->
+            <div class="table-container form-section">
+                <div class="table-header">Cadastrar Novo Produto</div>
+
+                <form id="productForm" class="p-20">
+                <!--linha 1: Produto e categoria-->
+                    <div class="linha-form">
+                        <div class="grupo-input">
+                            <label>Produto</label>
+                            <input type="text" id="name" placeholder="EX: Macbook Pro" required>
+                        </div>
+                    
+                        <div class="grupo-input">
+                            <label>Categoria</label>
+                            <select id="category" required>
+                                <option value="">Selecione...</option>
+                                <option value="Eletrônico">Eletrônico</option>
+                                <option value="Pereféricos">Periférios</option>
+                                <option value="Móveis">Móveis</option>
+                                <option value="Acessório">Acessório</option> 
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="linha-form">
+                        <div class="grupo-input">
+                            <label>Preço (R$)</label>
+                            <input type="number" id="price" step="0.01" placeholder="0,00" required>
+                        </div>
+
+                        <div class="grupo-input">
+                            <label>Quantidade</label>
+                            <input type="number" id="qty" placeholder="EX: 10" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-add">Adicionar ao Inventario</button>
+                </form>
+
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">Inventário de Produto </div>
+                    <table id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Qtd</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!--O JavaScript preencherá este espaço com novas linhas-->
+                        </tbody>
+                    </table>
+            </div>
+        </div>                                                       
+      <script src="script.js"></script>       
+    </body>
+</html>
